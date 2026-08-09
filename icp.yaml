@@ -1,4 +1,5 @@
 canisters:
   - name: website_canister
-    type: assets
-    source: assets
+    build:
+      outputs:
+        - assets
