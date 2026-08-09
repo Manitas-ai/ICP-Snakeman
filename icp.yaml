@@ -1,6 +1,4 @@
 canisters:
   - name: website_canister
-    build:
-      steps: []
-      outputs:
-        - assets
+    sync:
+      - assets
