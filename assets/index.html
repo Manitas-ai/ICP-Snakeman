@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snakeman Junior — The Ultimate Superhero</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- CURSOR TRAIL -->
+  <div id="cursor-snake"></div>
+
+  <!-- NAVIGATION -->
+  <nav id="navbar">
+    <div class="nav-logo">
+      <span class="snake-icon">🐍</span>
+      <span class="nav-title">SNAKEMAN JUNIOR</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#origin">Origin</a></li>
+      <li><a href="#powers">Powers</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#fans">Fan Zone</a></li>
+    </ul>
+    <div class="nav-toggle" id="navToggle">☰</div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="hero-section">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-particles" id="particles"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge reveal">OFFICIAL FAN WEBSITE</div>
+
+      <div class="hero-logo-wrap reveal">
+        <svg class="hero-snake-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <!-- Glow filter -->
+          <defs>
+            <filter id="glow">
+              <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+              <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <linearGradient id="snakeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#00e676"/>
+              <stop offset="100%" style="stop-color:#00897b"/>
+            </linearGradient>
+            <radialGradient id="eyeGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" style="stop-color:#ff1744"/>
+              <stop offset="100%" style="stop-color:#b71c1c"/>
+            </radialGradient>
+          </defs>
+          <!-- Body coil -->
+          <path d="M100 30 C140 30, 170 60, 170 100 C170 140, 140 160, 100 160 C60 160, 40 140, 50 110 C60 80, 90 90, 100 80 C110 70, 120 50, 100 40"
+                stroke="url(#snakeGrad)" stroke-width="18" fill="none" stroke-linecap="round" filter="url(#glow)"/>
+          <!-- Head -->
+          <ellipse cx="100" cy="32" rx="22" ry="16" fill="url(#snakeGrad)" filter="url(#glow)"/>
+          <!-- Eyes -->
+          <circle cx="92" cy="28" r="5" fill="url(#eyeGlow)"/>
+          <circle cx="108" cy="28" r="5" fill="url(#eyeGlow)"/>
+          <circle cx="93" cy="27" r="2" fill="#fff"/>
+          <circle cx="109" cy="27" r="2" fill="#fff"/>
+          <!-- Tongue -->
+          <path d="M100 44 L100 56 M100 56 L94 64 M100 56 L106 64"
+                stroke="#ff1744" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <!-- Scales pattern -->
+          <path d="M85 100 Q95 95 105 100 Q95 105 85 100Z" fill="#00c853" opacity="0.6"/>
+          <path d="M80 115 Q92 110 104 115 Q92 120 80 115Z" fill="#00c853" opacity="0.5"/>
+          <path d="M78 130 Q90 125 102 130 Q90 135 78 130Z" fill="#00c853" opacity="0.4"/>
+          <!-- Hero mask -->
+          <path d="M80 26 Q100 15 120 26 Q115 20 100 18 Q85 20 80 26Z" fill="#1a1a2e" opacity="0.7"/>
+          <!-- Cape hint -->
+          <path d="M80 42 Q70 55 65 70 Q75 60 85 55Z" fill="#b71c1c" opacity="0.8"/>
+          <path d="M120 42 Q130 55 135 70 Q125 60 115 55Z" fill="#b71c1c" opacity="0.8"/>
+        </svg>
+      </div>
+
+      <h1 class="hero-title reveal">
+        <span class="title-snake">SNAKE</span><span class="title-man">MAN</span>
+        <br/><span class="title-junior">JUNIOR</span>
+      </h1>
+
+      <p class="hero-tagline reveal">
+        Born from Legend. Forged in Grief. <br/>
+        <strong>The Most Powerful Serpent Hero Alive.</strong>
+      </p>
+
+      <div class="hero-stats reveal">
+        <div class="stat-chip">⚡ SPEED 10×</div>
+        <div class="stat-chip">☠️ VENOM 10×</div>
+        <div class="stat-chip">🛡️ INVINCIBLE</div>
+      </div>
+
+      <a href="#origin" class="cta-btn reveal">Discover the Legend ↓</a>
+    </div>
+
+    <div class="scroll-hint">▼ SCROLL</div>
+  </section>
+
+  <!-- ORIGIN SECTION -->
+  <section id="origin" class="section-dark">
+    <div class="section-header reveal">
+      <span class="section-label">THE STORY</span>
+      <h2>Where It All Began</h2>
+    </div>
+
+    <div class="origin-grid">
+
+      <!-- DAD PANEL -->
+      <div class="origin-card memorial reveal">
+        <div class="card-art memorial-art">
+          <svg viewBox="0 0 160 180" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="dadGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#76ff03"/>
+                <stop offset="100%" style="stop-color:#33691e"/>
+              </linearGradient>
+            </defs>
+            <!-- Silhouette -->
+            <ellipse cx="80" cy="40" rx="28" ry="32" fill="url(#dadGrad)" opacity="0.9"/>
+            <rect x="54" y="68" width="52" height="70" rx="10" fill="url(#dadGrad)" opacity="0.8"/>
+            <!-- Arms -->
+            <path d="M54 78 Q30 90 25 110" stroke="url(#dadGrad)" stroke-width="14" fill="none" stroke-linecap="round" opacity="0.8"/>
+            <path d="M106 78 Q130 90 135 110" stroke="url(#dadGrad)" stroke-width="14" fill="none" stroke-linecap="round" opacity="0.8"/>
+            <!-- Legs -->
+            <path d="M66 135 Q60 160 55 178" stroke="url(#dadGrad)" stroke-width="12" fill="none" stroke-linecap="round" opacity="0.8"/>
+            <path d="M94 135 Q100 160 105 178" stroke="url(#dadGrad)" stroke-width="12" fill="none" stroke-linecap="round" opacity="0.8"/>
+            <!-- Mask -->
+            <ellipse cx="80" cy="36" rx="20" ry="12" fill="#1a1a2e" opacity="0.7"/>
+            <circle cx="70" cy="34" r="5" fill="#76ff03" opacity="0.9"/>
+            <circle cx="90" cy="34" r="5" fill="#76ff03" opacity="0.9"/>
+            <!-- Cape -->
+            <path d="M54 72 Q20 100 15 150 Q40 130 54 120Z" fill="#388e3c" opacity="0.6"/>
+            <path d="M106 72 Q140 100 145 150 Q120 130 106 120Z" fill="#388e3c" opacity="0.6"/>
+            <!-- RIP crack effect -->
+            <path d="M40 5 L60 30 M120 5 L100 30 M80 0 L80 20" stroke="#ff1744" stroke-width="2" opacity="0.7"/>
+          </svg>
+        </div>
+        <div class="memorial-ribbon">† IN MEMORIAM</div>
+        <h3>SNAKEMAN SR.</h3>
+        <p class="card-role">The Original. The Legend. The Father.</p>
+        <p class="card-text">
+          Marcus "Mako" Vega gained his serpent powers after a classified government experiment gone wrong in 1998. For 20 years he protected the city as <strong>Snakeman</strong> — crawling skyscrapers, neutralising criminals with precision venom strikes, and never losing a single battle.
+        </p>
+        <p class="card-text">
+          Until a Tuesday evening in March 2022. Returning home in civilian clothes, no suit, no powers activated — a rogue truck lost its brakes on Route 9. Marcus never saw it coming. The greatest hero of his generation was gone in seconds.
+        </p>
+        <div class="memorial-quote">"He didn't die in battle. He died being human. That's what made him the greatest of all."</div>
+      </div>
+
+      <!-- JUNIOR PANEL -->
+      <div class="origin-card junior reveal">
+        <div class="card-art junior-art">
+          <svg viewBox="0 0 160 180" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="juniorGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#00e676"/>
+                <stop offset="50%" style="stop-color:#1de9b6"/>
+                <stop offset="100%" style="stop-color:#ff1744"/>
+              </linearGradient>
+              <filter id="glow2">
+                <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+            <!-- Power aura -->
+            <circle cx="80" cy="90" r="75" fill="url(#juniorGrad)" opacity="0.08"/>
+            <circle cx="80" cy="90" r="60" fill="url(#juniorGrad)" opacity="0.06"/>
+            <!-- Body -->
+            <ellipse cx="80" cy="40" rx="28" ry="32" fill="url(#juniorGrad)" filter="url(#glow2)"/>
+            <rect x="54" y="68" width="52" height="70" rx="10" fill="url(#juniorGrad)" opacity="0.95" filter="url(#glow2)"/>
+            <!-- Arms - dynamic pose -->
+            <path d="M54 75 Q25 60 15 45" stroke="url(#juniorGrad)" stroke-width="14" fill="none" stroke-linecap="round" filter="url(#glow2)"/>
+            <path d="M106 75 Q130 58 145 42" stroke="url(#juniorGrad)" stroke-width="14" fill="none" stroke-linecap="round" filter="url(#glow2)"/>
+            <!-- Legs -->
+            <path d="M66 135 Q58 162 52 178" stroke="url(#juniorGrad)" stroke-width="12" fill="none" stroke-linecap="round"/>
+            <path d="M94 135 Q102 162 108 178" stroke="url(#juniorGrad)" stroke-width="12" fill="none" stroke-linecap="round"/>
+            <!-- Snake tail extending from body -->
+            <path d="M80 135 Q60 160 50 175 Q65 165 75 170 Q85 175 90 175 Q100 168 90 158 Q85 150 80 135Z" fill="#00c853" opacity="0.6"/>
+            <!-- Mask - sleeker -->
+            <ellipse cx="80" cy="36" rx="22" ry="13" fill="#0a2010" opacity="0.85"/>
+            <circle cx="70" cy="34" r="6" fill="#ff1744" filter="url(#glow2)"/>
+            <circle cx="90" cy="34" r="6" fill="#ff1744" filter="url(#glow2)"/>
+            <circle cx="71" cy="33" r="2.5" fill="#fff"/>
+            <circle cx="91" cy="33" r="2.5" fill="#fff"/>
+            <!-- Tongue -->
+            <path d="M80 56 L80 65 M80 65 L74 72 M80 65 L86 72" stroke="#ff1744" stroke-width="3" fill="none" stroke-linecap="round" filter="url(#glow2)"/>
+            <!-- Power lightning -->
+            <path d="M15 45 L5 35 L18 32 L12 20" stroke="#00e676" stroke-width="2" fill="none" opacity="0.8"/>
+            <path d="M145 42 L155 32 L142 29 L148 17" stroke="#00e676" stroke-width="2" fill="none" opacity="0.8"/>
+            <!-- S logo on chest -->
+            <text x="72" y="110" font-family="Arial" font-weight="bold" font-size="22" fill="#0a2010" opacity="0.9">S</text>
+          </svg>
+        </div>
+        <div class="junior-badge">⚡ ACTIVE HERO</div>
+        <h3>SNAKEMAN JUNIOR</h3>
+        <p class="card-role">The Heir. The Evolution. The Unstoppable.</p>
+        <p class="card-text">
+          Leo Vega was only 16 when his father died. Grief-stricken and furious, he broke into his father's secret laboratory — and touched the same serpentine serum that had given Marcus his powers. But Leo's younger DNA absorbed it differently. <em>More completely.</em>
+        </p>
+        <p class="card-text">
+          Within 72 hours, Leo could partially transform into a 40-foot anaconda. His venom was ten times more potent. His skin regenerated damage in real-time. He could communicate with every snake on Earth simultaneously. His father's legacy didn't just live on — <strong>it evolved.</strong>
+        </p>
+        <div class="junior-quote">"They said I had big shoes to fill. Dad didn't wear shoes. He shed his skin and became something greater. So will I."</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- POWERS SECTION -->
+  <section id="powers" class="section-darker">
+    <div class="section-header reveal">
+      <span class="section-label">ABILITIES</span>
+      <h2>The Powers of Snakeman Junior</h2>
+      <p class="section-sub">Every ability his father had — amplified by a generation of raw evolution</p>
+    </div>
+
+    <div class="powers-grid">
+
+      <div class="power-card reveal" data-delay="0">
+        <div class="power-icon">🐍</div>
+        <h4>FULL TRANSFORMATION</h4>
+        <div class="power-bar"><div class="power-fill" data-power="100"></div></div>
+        <p>Can transform completely into a 40-foot king cobra or a massive anaconda. Retains full intelligence in serpent form. Dad could only partially transform.</p>
+        <div class="power-level">POWER LEVEL: MAXIMUM</div>
+      </div>
+
+      <div class="power-card reveal" data-delay="100">
+        <div class="power-icon">☠️</div>
+        <h4>NEURO-VENOM STRIKE</h4>
+        <div class="power-bar"><div class="power-fill" data-power="97"></div></div>
+        <p>His venom is 10× more potent than his father's. A single drop can paralyse a tank. In extreme situations he secretes an airborne mist that stops all movement within 50 metres.</p>
+        <div class="power-level">POWER LEVEL: LETHAL</div>
+      </div>
+
+      <div class="power-card reveal" data-delay="200">
+        <div class="power-icon">🧬</div>
+        <h4>INSTANT REGENERATION</h4>
+        <div class="power-bar"><div class="power-fill" data-power="95"></div></div>
+        <p>Like all snakes shed their skin, Leo sheds damage. Lost a hand in battle with the Viper Syndicate — it grew back in 4 minutes. Bullets, blades, explosions — temporary inconveniences.</p>
+        <div class="power-level">POWER LEVEL: NEAR IMMORTAL</div>
+      </div>
+
+      <div class="power-card reveal" data-delay="300">
+        <div class="power-icon">⚡</div>
+        <h4>SERPENT SPEED</h4>
+        <div class="power-bar"><div class="power-fill" data-power="92"></div></div>
+        <p>Moves at strike speed — the fastest motion in the animal kingdom scaled to human size. Can cross a football field before the human eye registers movement.</p>
+        <div class="power-level">POWER LEVEL: BLINDING</div>
+      </div>
+
+      <div class="power-card reveal" data-delay="400">
+        <div class="power-icon">🧠</div>
+        <h4>SNAKE TELEPATHY</h4>
+        <div class="power-bar"><div class="power-fill" data-power="88"></div></div>
+        <p>Communicates and commands every snake species on Earth simultaneously. His most unusual battle was against the Viper Army — 10,000 trained cobras suddenly switched sides mid-fight.</p>
+        <div class="power-level">POWER LEVEL: GLOBAL</div>
+      </div>
+
+      <div class="power-card reveal" data-delay="500">
+        <div class="power-icon">👁️</div>
+        <h4>HEAT VISION & PIT SENSE</h4>
+        <div class="power-bar"><div class="power-fill" data-power="85"></div></div>
+        <p>Sees in thermal infrared like a pit viper, detects heartbeats through walls up to 200 metres away, and senses chemical traces left up to 72 hours earlier. No one hides from him.</p>
+        <div class="power-level">POWER LEVEL: PREDATOR</div>
+      </div>
+
+    </div>
+
+    <!-- POWER COMPARISON -->
+    <div class="comparison-block reveal">
+      <h3>Father vs. Son — The Evolution</h3>
+      <div class="comparison-grid">
+        <div class="compare-col">
+          <div class="compare-header dad-header">🐍 SNAKEMAN SR.</div>
+          <div class="compare-item">Wall crawling ✅</div>
+          <div class="compare-item">Venom strike ✅</div>
+          <div class="compare-item">Partial transformation ✅</div>
+          <div class="compare-item">Enhanced speed ✅</div>
+          <div class="compare-item">Snake telepathy ❌</div>
+          <div class="compare-item">Full transformation ❌</div>
+          <div class="compare-item">Regeneration ❌</div>
+        </div>
+        <div class="compare-vs">VS</div>
+        <div class="compare-col">
+          <div class="compare-header junior-header">⚡ SNAKEMAN JUNIOR</div>
+          <div class="compare-item upgraded">Wall crawling ✅ 10×</div>
+          <div class="compare-item upgraded">Neuro-venom ✅ 10×</div>
+          <div class="compare-item upgraded">Full transformation ✅ NEW</div>
+          <div class="compare-item upgraded">Serpent speed ✅ 10×</div>
+          <div class="compare-item upgraded">Snake telepathy ✅ NEW</div>
+          <div class="compare-item upgraded">40-foot anaconda form ✅ NEW</div>
+          <div class="compare-item upgraded">Instant regeneration ✅ NEW</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY SECTION -->
+  <section id="gallery" class="section-dark">
+    <div class="section-header reveal">
+      <span class="section-label">GALLERY</span>
+      <h2>Iconic Moments</h2>
+      <p class="section-sub">Six defining chapters of the Snakeman legacy — illustrated in comic style</p>
+    </div>
+
+    <div class="gallery-grid">
+
+      <div class="comic-panel reveal panel-large" data-caption="The Last Patrol">
+        <div class="panel-scene scene-city">
+          <div class="city-bg"></div>
+          <div class="hero-silhouette dad-silhouette"></div>
+          <div class="panel-text-overlay">
+            <span class="panel-year">2019</span>
+            <span class="panel-title-small">THE LAST PATROL</span>
+          </div>
+        </div>
+        <div class="panel-caption">Snakeman Sr. on his final solo patrol — three years before the accident. The city never felt safer.</div>
+      </div>
+
+      <div class="comic-panel reveal" data-caption="The Accident">
+        <div class="panel-scene scene-accident">
+          <div class="road-bg"></div>
+          <div class="truck-shape"></div>
+          <div class="impact-flash"></div>
+          <div class="panel-text-overlay">
+            <span class="panel-year">2022</span>
+            <span class="panel-title-small">ROUTE 9. 11:47 PM.</span>
+          </div>
+        </div>
+        <div class="panel-caption">The moment that changed everything. A hero in civilian clothes, no warning, no chance to react.</div>
+      </div>
+
+      <div class="comic-panel reveal" data-caption="The Lab">
+        <div class="panel-scene scene-lab">
+          <div class="lab-glow"></div>
+          <div class="serum-vial"></div>
+          <div class="junior-small"></div>
+          <div class="panel-text-overlay">
+            <span class="panel-year">2022</span>
+            <span class="panel-title-small">THE INHERITANCE</span>
+          </div>
+        </div>
+        <div class="panel-caption">Leo breaks into his father's secret lab, 3 days after the funeral. He touches the serum — and the world changes forever.</div>
+      </div>
+
+      <div class="comic-panel reveal" data-caption="First Transformation">
+        <div class="panel-scene scene-transform">
+          <div class="transform-burst"></div>
+          <div class="snake-emerging"></div>
+          <div class="panel-text-overlay">
+            <span class="panel-year">2022</span>
+            <span class="panel-title-small">BORN AGAIN</span>
+          </div>
+        </div>
+        <div class="panel-caption">The first full transformation — 40 feet of pure power tearing through the lab ceiling. A new era begins.</div>
+      </div>
+
+      <div class="comic-panel reveal" data-caption="Viper Syndicate">
+        <div class="panel-scene scene-battle">
+          <div class="battle-bg"></div>
+          <div class="junior-action"></div>
+          <div class="enemies-scatter"></div>
+          <div class="panel-text-overlay">
+            <span class="panel-year">2023</span>
+            <span class="panel-title-small">VIPER SYNDICATE WAR</span>
+          </div>
+        </div>
+        <div class="panel-caption">The 48-hour battle against the Viper Syndicate. 200 super-soldiers. One Snakeman Junior. Final score: 200–0.</div>
+      </div>
+
+      <div class="comic-panel reveal panel-large" data-caption="The Memorial">
+        <div class="panel-scene scene-memorial">
+          <div class="memorial-stone"></div>
+          <div class="junior-kneeling"></div>
+          <div class="light-beam"></div>
+          <div class="panel-text-overlay">
+            <span class="panel-year">EVERY YEAR</span>
+            <span class="panel-title-small">FOR DAD</span>
+          </div>
+        </div>
+        <div class="panel-caption">"Every battle I fight is for you, Dad. Every villain I stop is one more reason your sacrifice meant something."</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAN SECTION -->
+  <section id="fans" class="section-darker">
+    <div class="section-header reveal">
+      <span class="section-label">FAN ZONE</span>
+      <h2>The World Speaks</h2>
+    </div>
+
+    <div class="fan-grid">
+
+      <div class="fan-card reveal">
+        <div class="fan-avatar">🐍</div>
+        <div class="fan-quote">"Spiderman who? My son has Snakeman Junior on every wall of his room. The story of loss and power — it hits different."</div>
+        <div class="fan-name">— Sarah K., New York</div>
+        <div class="fan-stars">⭐⭐⭐⭐⭐</div>
+      </div>
+
+      <div class="fan-card reveal">
+        <div class="fan-avatar">⚡</div>
+        <div class="fan-quote">"The grief backstory is what separates Junior from every other superhero. He's not fighting evil for fun. He's fighting because he has to. Because Dad can't anymore."</div>
+        <div class="fan-name">— Marcus T., London</div>
+        <div class="fan-stars">⭐⭐⭐⭐⭐</div>
+      </div>
+
+      <div class="fan-card reveal">
+        <div class="fan-avatar">🧬</div>
+        <div class="fan-quote">"The telepathy power is genuinely terrifying. Imagine 10,000 cobras all answering to one 17-year-old. The Viper Syndicate never stood a chance."</div>
+        <div class="fan-name">— Dr. Yuki R., Tokyo</div>
+        <div class="fan-stars">⭐⭐⭐⭐⭐</div>
+      </div>
+
+      <div class="fan-card reveal">
+        <div class="fan-avatar">☠️</div>
+        <div class="fan-quote">"What I love is the rawness. He's still a teenager. He makes mistakes. He cries at his dad's grave. But he gets up and he's terrifying. Best superhero of the decade."</div>
+        <div class="fan-name">— Carlos V., Madrid</div>
+        <div class="fan-stars">⭐⭐⭐⭐⭐</div>
+      </div>
+
+    </div>
+
+    <!-- FACTS TICKER -->
+    <div class="facts-ticker reveal">
+      <div class="ticker-label">SNAKEMAN FACTS</div>
+      <div class="ticker-track" id="tickerTrack">
+        <span>🐍 Leo Vega is 18 years old</span>
+        <span>⚡ He has defeated 847 villains to date</span>
+        <span>🧬 His cells regenerate 10× faster than any known organism</span>
+        <span>☠️ His venom is 10× more potent than his father's</span>
+        <span>🌍 He commands every snake species on Earth</span>
+        <span>🦸 His father was never defeated in battle</span>
+        <span>🏙️ He protects 3 cities simultaneously</span>
+        <span>👁️ Can sense a heartbeat through 8 floors of concrete</span>
+        <span>🐍 Leo Vega is 18 years old</span>
+        <span>⚡ He has defeated 847 villains to date</span>
+        <span>🧬 His cells regenerate 10× faster than any known organism</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-logo">
+      <span class="snake-icon-lg">🐍</span>
+      <div>
+        <div class="footer-title">SNAKEMAN JUNIOR</div>
+        <div class="footer-sub">Official Fan Website</div>
+      </div>
+    </div>
+    <div class="footer-tagline">
+      "Unstoppable. Unbreakable. The Legacy of a Father. The Power of a Son."
+    </div>
+    <div class="footer-hosted">
+      <span>🔗 Hosted unstoppably on</span>
+      <strong> Internet Computer Protocol (ICP)</strong>
+    </div>
+    <div class="footer-disclaimer">
+      This is a fictional fan website. All characters, events and stories are entirely imaginary and created for entertainment purposes only.
+    </div>
+    <div class="footer-copy">© 2026 Snakeman Junior Fan Universe — All Rights Reserved</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
